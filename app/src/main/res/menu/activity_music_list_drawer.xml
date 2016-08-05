@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camara"
+            android:icon="@android:drawable/ic_media_play"
+            android:title="Playing Mode" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@android:drawable/ic_menu_share"
+            android:title="Sharing Mode" />
+        <item
+            android:id="@+id/nav_share_ext"
+            android:icon="@android:drawable/ic_menu_share"
+            android:title="Share External" />
+    </group>
+
+    <item android:title="Options">
+        <menu>
+            <item
+                android:id="@+id/nav_shuffle"
+                android:icon="@drawable/shuffle"
+                android:title="Shuffle" />
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/stop"
+                android:title="Stop" />
+        </menu>
+
+    </item>
+
+</menu>

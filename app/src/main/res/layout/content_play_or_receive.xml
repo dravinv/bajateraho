@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.awesome.dravin.appdemo1.PlayOrReceive"
+    tools:showIn="@layout/activity_play_or_receive"
+    android:background="#8bfffded">
+
+    <Button
+        android:id="@+id/buttonVideo"
+
+        android:text="Video"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonshape_music"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/buttonMusic"
+
+        android:text="Music"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonshape_music"
+        android:layout_marginBottom="70dp"
+        android:layout_above="@+id/buttonVideo"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/buttonReceive"
+
+        android:text="Receive"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonshape_music"
+        android:layout_marginTop="75dp"
+        android:layout_below="@+id/buttonVideo"
+        android:layout_alignStart="@+id/buttonMusic" />
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.awesome.dravin.appdemo1" >
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon_small"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".MainActivity" >
+        </activity>
+
+        <service
+            android:name=".FileTransferService"
+            android:enabled="true" />
+        <service
+            android:name=".WiFiClientIpTransferService"
+            android:enabled="true" />
+        <service
+            android:name=".MusicService"
+            android:enabled="true" />
+
+        <receiver android:name=".NotificationControls" />
+        <receiver android:name=".NotificationControls1" />
+        <receiver android:name=".NotificationControls2" />
+        <receiver android:name=".HeadsetControls" >
+            <intent-filter>
+                <action android:name="Headset_Plugged" >
+                </action>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".splash"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PlayOrReceive"
+            android:label="@string/title_activity_play_or_receive"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".MusicList"
+            android:label="@string/title_activity_music_list"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".TestActivity"
+            android:label="Test Activity"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".VideoList"
+            android:label="@string/title_activity_video_list"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".VideoPlayer"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_video_player"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:mimeType="video/mp4"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MusicPlayerReceiver"
+            android:label="@string/title_activity_music_player_receiver"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".Share_Receiver"
+            android:label="@string/title_activity_share__receiver"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+    </application>
+
+</manifest>
